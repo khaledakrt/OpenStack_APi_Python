@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networks</title>
+</head>
+<body>
+    <h1>Networks</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID Réseau</th>
+                <th>Nom</th>
+                <th>Statut</th>
+                <th>Nom du Sous-Réseau</th>
+                <th>Adresse IPv4 du Sous-Réseau</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for network in networks %}
+            <tr>
+                <td>{{ network[0] }}</td>
+                <td>{{ network[1] }}</td>
+                <td>{{ network[2] }}</td>
+                <td>{{ network[3] }}</td>
+                <td>{{ network[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
